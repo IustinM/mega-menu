@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.mega_menu{
+display: flex;
+list-style-type: none;
+width: 100%;
+align-items: stretch;
+}
+.mega_menu__top-link{
+    padding: 0.3rem;
+    text-decoration: none;
+    background-color: lightblue;
+    display: block;
+    text-align: center;
+    overflow: hidden;+
+
+    &:hover{
+        background-color: darkblue;
+        color: white;
+    }
+}
+li{
+    flex-grow: 1;
+    width: 100%;
+}
+.mega_menu__drop-down{
+    display: none;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background-color: yellow;
+}
+
+.mega_menu__top-link:hover + .mega_menu__drop-down{
+    display: block;
+    
+}

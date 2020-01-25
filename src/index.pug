@@ -5,8 +5,17 @@ html(lang="en")
         meta(name="viewport", content="width=`, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Solving mega menu challenge
+        link(rel="stylesheet", href="style.css")
     body
-        ul
-            each menu in data.menu
+        .mega_menu
+            each menu,key in data.menu
                 li
-                    a(href=`/${menu.id}`)=menu.label
+                    a.mega_menu__top-link(href=`/${menu.id}`)=menu.label
+                    .mega_menu__drop-down
+                        
+                        h3=menu.secondMenuTitle
+                        ul 
+                            each menu2 in menu.secondMenuItemList
+                                li  
+                                    
+                                    span=menu2.label
